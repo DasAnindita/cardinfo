@@ -220,22 +220,24 @@ label{
   height:35px;
   position: absolute;
 }
-@media screen and (max-width:375px){
+@media screen and (max-width: 750px) {
+	#root {
+		flex-direction: column;
+	}
 
-  .container{
-    width:100%;
-    flex-direction: column;
-  }
-  body{
-    width:100%;
-    
-    
-  }
-  
+	body::after {
+		background-image: url('bg-main-mobile.png');
+		height: 40%;
+		width: 100%;
+	}
+
+	
 }
+   
 </style>
 </head>
 <body>
+  <div id="root"></div>div>
 <main class="container">
 
 <div class="card front" style="width:100%">
