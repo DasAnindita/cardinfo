@@ -5,47 +5,378 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
   
-  <title>Frontend Mentor | Interactive card details form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+ <style>
+body{
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size:18px;
+  background-color: hsl(0, 0%, 100%);
+  width: 1000px;
+  background-image: url("bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 450px 1000px;
+}
+
+.front-card{
+      width:28% ;
+      height:28%;
+      margin-left: 200px;
+      margin-top: 140px;
+      position: absolute;
+      
+}
+.logo{
+  width:4.5%;
+  top: 180px;
+  left:224px;
+  position:absolute;
+}
+.back-card{
+      width:28% ;
+      height:28%;
+      margin-left: 270px;
+      margin-top: 370px;
+      position: absolute;
+}
+.card-num{
+  position: absolute;
+  color: white;
+  left: 230px;
+  top: 255px;
+  font-size: 28px;
+  font-weight: 100;
+}
+.card-name{
+  position: absolute;
+  color: white;
+  left: 232px;
+  top: 320px;
+  font-size: 10px;
+  font-weight: 100;
+
+}
+.mm{
+  position: absolute;
+  color: white;
+  left: 520px;
+  top: 320px;
+  font-size: 10px;
+  font-weight: 100;
+}
+.yy{
+  position: absolute;
+  color: white;
+  left: 540px;
+  top: 320px;
+  font-size: 10px;
+  font-weight: 100;
+}
+
+.cvc{
+  position: absolute;
+  color: white;
+  left: 580px;
+  top: 460px;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.card-info{
+  font-size: 15px;
+  top: 240px;
+  left: 760px;
+  position: absolute;
+}
+.name-name{
+  width:85%;
+  height:25px;
+  border-color: hsl(270, 3%, 87%);
+  border-radius: 5px;
+  border-style:solid;
+  border-width: 1px;
+  margin-top: 10px;
+}
+.name-name:hover{
+  border-color: hsl(278, 68%, 11%);
+}
+.name{
+  font-size: 12px;
+  color:hsl(278, 68%, 11%);
+}
+.number-number{
+  width:85%;
+  height:25px;
+  border-color: hsl(270, 3%, 87%);
+  border-radius: 5px;
+  border-style:solid;
+  border-width: 1px;
+  margin-top: 10px;
+}
+.number-number:hover{
+  border-color: hsl(278, 68%, 11%);
+}
+label{
+  font-size: 12px;
+  color:hsl(278, 68%, 11%);
+}
+.MM-MM{
+  width:20%;
+  height:25px;
+  border-color: hsl(270, 3%, 87%);
+  border-radius: 5px;
+  border-style:solid;
+  border-width: 1px;
+  margin-top: 10px;
+}
+.MM-MM:hover{
+  border-color: hsl(278, 68%, 11%);
+}
+.YY-YY:hover{
+  border-color: hsl(278, 68%, 11%);
+}
+.cvc-cvc:hover{
+  border-color: hsl(278, 68%, 11%);
+}
+.YY-YY{
+  width:20%;
+  height:25px;
+  border-color: hsl(270, 3%, 87%);
+  border-radius: 5px;
+  border-style:solid;
+  border-width: 1px;
+  margin-top: 10px;
+}
+.cvc-cvc{
+  width:30%;
+  height:25px;
+  border-color: hsl(270, 3%, 87%);
+  border-radius: 5px;
+  border-style:solid;
+  border-width: 1px;
+  margin-top: 10px;
+  margin-left: 25px;
+  position: absolute;
+}
+.CVC{
+  margin-left: 52px;
+  position: absolute;
+  font-size: 12px;
+  color:hsl(278, 68%, 11%);
+}
+.EXP{
+  font-size: 12px;
+  color:hsl(278, 68%, 11%);
+}
+.btn-btn{
+   
+  margin-top: 20px;
+  color: white;
+  background-color:hsl(278, 68%, 11%) ;
+  border-style: none;
+  border-radius: 5px;
+  width: 85%;
+  height:35px;
+}
+
+.success{
+  
+  margin-left: 890px;
+  margin-top:220px;
+  position:absolute;
+  width:4%;
+
+}
+.thank{
+  margin-left: 870px;
+  color:hsl(278, 68%, 11%);
+  margin-top:300px;
+  position:absolute;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+.act{
+  margin-left: 830px;
+  color:hsl(278, 68%, 11%);
+  margin-top:340px;
+  position:absolute;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+.btn{
+  margin-top: 400px;
+  margin-left: 800px;
+  color: white;
+  background-color:hsl(278, 68%, 11%) ;
+  border-style: none;
+  border-radius: 5px;
+  width: 20%;
+  height:35px;
+  position: absolute;
+}
+@media screen and (max-width:375px){
+
+  .container{
+    max-width: 320px;
+    width:100%;
+  }
+  
+}
+</style>
 </head>
 <body>
+<main class="container">
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
+<div class="card front" style="width:100%">
+<img class="front-card" src="bg-card-front.png" >
+<img class="logo" src="card-logo.svg">
+<p class="card-num">0000 0000 0000 0000</p>
+<p class="card-name">Jane Appleseed</p>
+<p class="mm">00 /</p><p class="yy">00</p>
+</div>
+<div class="card back" style="width:100%">
+<img class="back-card" src="bg-card-back.png" >
+<p class="cvc">000</p>
+</div>
+<form class="card-info" id="card-info" onsubmit="return false">
+  <div class="cardholder-name">
+  <label class="name">CARDHOLDER NAME</label><br>
+  <input type="input" class="name-name" id="name" placeholder="  e.g Jane Appleseed" required><br><br>
+</div>
+<div class="card-number">
+  <label class="number">CARD NUMBER</label><br>
+  <input type="input" class="number-number" id="number" placeholder="  e.g 1234 5678 9123 0000" maxlength="16" required><br><br>
+</div>
+<div class="card-exp">
+<label class="EXP"for="exp">EXP. DATE (MM/YY)</label>
+<label class="CVC" for="cvc">CVC</label>
+</div>
+<div class="card-details">
+  <input type="input" id="MM" class="MM-MM" placeholder="  MM" maxlength="2" required>
+  <input type="input" id="YY" class="YY-YY" placeholder="  YY" maxlength="2" required>
+  <input type="input" id="cvc" class="cvc-cvc" placeholder="  e.g 123" maxlength="3" required>
+  <br>
+</div>
+  <button type="submit" class="btn-btn">Confirm</button>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+</form>
+<div class="completion"  id="com" style="display: none;">
+  <img class="success" src="icon-complete.svg">
+  <p class="thank">Thank you!</p>
+ <p class="act"> We've added your card details</p>
+ <button type="submit" id="btn" class="btn" onclick="history.back()">Continue</button>
+</div>
+<div id="error-message"></div>
+</main>
+  
+
+<script>
+  //card elements
+  const cardname=document.querySelector('.card-name');
+  const cardnumber=document.querySelector('.card-num');
+  const month=document.querySelector('.mm');
+  const year=document.querySelector('.yy');
+  const cvc=document.querySelector('.cvc');
+  
+ //input elements
+ 
+ const inname=document.querySelector('#name');
+ const innumber=document.querySelector('#number');
+ const inexpmonth=document.querySelector('#MM');
+ const inexpyear=document.querySelector('#YY');
+ const incvc=document.querySelector('#cvc');
+ const submit = document.querySelector('.btn-btn');
+
+ 
+ inname.addEventListener('input', function () {
+    inname.addEventListener('keyup', function () {
+        if (inname.value === '') {
+            cardname.innerHTML = 'JANE APPLESEED';
+        }
+        else {
+            inname.value = inname.value.replace(/[^\D]/g, '')
+            cardname.innerHTML = inname.value;
+        }
+    });
+});
+
+innumber.addEventListener('input',function(){
+  innumber.addEventListener('keyup',function(){
+    if(innumber.value==''){
+      cardnumber.innerHTML='0000 0000 0000 0000';
+
+    }
+    else{
+      cardnumber.innerHTML=innumber.value;
+    }
+  });
+});
+
+inexpmonth.addEventListener('input',function(){
+  inexpmonth.addEventListener('keyup',function(){
+    if(inexpmonth.value==''){
+      month.innerHTML='00';
+
+    }
+    else{
+      month.innerHTML=inexpmonth.value;
+    }
+  });
+});
+
+inexpyear.addEventListener('input',function(){
+  inexpyear.addEventListener('keyup',function(){
+    if(inexpyear.value==''){
+      year.innerHTML='00';
+
+    }
+    else{
+      year.innerHTML=inexpyear.value;
+    }
+  });
+});
+
+incvc.addEventListener('input',function(){
+  incvc.addEventListener('keyup',function(){
+    if(incvc.value==''){
+      cvc.innerHTML='000';
+
+    }
+    else{
+      cvc.innerHTML=incvc.value;
+    }
+  });
+});
+
+submit.addEventListener('click', function () {
+    if (inname.value === '' && innumber.value === '' && inexpmonth === '' && inexpyear === '' && incvc === '') {
+        alert('cannot be empty');
+    }
+    else {
+        const complet = document.querySelector('.completion');
+        const form = document.querySelector('.card-info');
+
+        if (complet.style.display === 'none') 
+        {
+            complet.style.display = 'flex';
+            form.style.display = 'none';
+        }
+        else {
+            complet.style.display = 'none';
+            form.style.display = 'block';
+        }
+    }
+});
+
+
+</script>
+ 
 </body>
 </html>
+ 
